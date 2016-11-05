@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2B6CCAFC1DCE2BFD00C94F66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CCAFB1DCE2BFD00C94F66 /* main.m */; };
+		2B6CCB041DCE2D4300C94F66 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CCB031DCE2D4300C94F66 /* InputHandler.m */; };
+		2B6CCB0A1DCE410900C94F66 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CCB091DCE410900C94F66 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		2B6CCAF81DCE2BFD00C94F66 /* SnakesAndLadders */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SnakesAndLadders; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6CCAFB1DCE2BFD00C94F66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B6CCB021DCE2D4300C94F66 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		2B6CCB031DCE2D4300C94F66 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		2B6CCB081DCE410900C94F66 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		2B6CCB091DCE410900C94F66 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				2B6CCAFB1DCE2BFD00C94F66 /* main.m */,
+				2B6CCB081DCE410900C94F66 /* Player.h */,
+				2B6CCB091DCE410900C94F66 /* Player.m */,
+				2B6CCB021DCE2D4300C94F66 /* InputHandler.h */,
+				2B6CCB031DCE2D4300C94F66 /* InputHandler.m */,
 			);
 			path = SnakesAndLadders;
 			sourceTree = "<group>";
@@ -119,7 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6CCB0A1DCE410900C94F66 /* Player.m in Sources */,
 				2B6CCAFC1DCE2BFD00C94F66 /* main.m in Sources */,
+				2B6CCB041DCE2D4300C94F66 /* InputHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +258,7 @@
 				2B6CCB011DCE2BFD00C94F66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

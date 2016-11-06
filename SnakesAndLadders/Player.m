@@ -27,6 +27,7 @@
                        @89:@26,
                        @95:@75,
                        @99:@78};
+        _gameOver = NO;
         
     }
     
@@ -38,6 +39,9 @@
     NSInteger rollDice = arc4random_uniform(6) + 1;
     
     self.currentSquare += rollDice;
+    
+    self.output = [NSString stringWithFormat:@"You rolled on %ld", (long)self.currentSquare];
+    NSLog(@"%@", self.output);
     
     NSNumber *myNum = @(self.currentSquare);
     
@@ -51,9 +55,18 @@
         
     }
     
-    NSLog(@"%ld", (long)rollDice);
-    
-    NSLog(@"Current square %ld", (long)self.currentSquare);
+    if (self.currentSquare >= 100) {
+        
+        self.output = [NSString stringWithFormat:@"You landed on %ld, the game is over", (long)self.currentSquare];
+        NSLog(@"%@", self.output);
+        self.gameOver = YES;
+        
+    } else {
+        
+        self.output = [NSString stringWithFormat:@"You landed on %ld", (long)self.currentSquare];
+        NSLog(@"%@", self.output);
+        
+    }
     
 }
 

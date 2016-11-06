@@ -17,15 +17,34 @@ int main(int argc, const char * argv[]) {
         Player *playerOne = [[Player alloc] init];
         
         NSLog(@"Welcome to the game of Snake & Ladders");
-        NSLog(@"roll/r - To roll the dice\nquit - To quit game");
         
         while (gameOn) {
+            
+            NSLog(@"roll/r - To roll the dice\nquit - To quit game");
             
             NSString *inputString = [InputHandler getInput];
             
             if ([inputString isEqualToString:@"roll"] || [inputString isEqualToString:@"r"]) {
                 
                 [playerOne rollDice];
+                
+                if (playerOne.gameOver) {
+                    
+                    NSLog(@"play - To play the game again\nquit - To quit game");
+                    
+                    inputString = [InputHandler getInput];
+                    
+                    if ([inputString isEqualToString:@"play"]) {
+                        
+                        playerOne.currentSquare = 0;
+                        playerOne.gameOver = NO;
+                        
+                    } else if ([inputString isEqualToString:@"quit"]) {
+                        
+                        gameOn = false;
+                        
+                    }
+                }
                 
             } else if ([inputString isEqualToString:@"quit"]) {
                 

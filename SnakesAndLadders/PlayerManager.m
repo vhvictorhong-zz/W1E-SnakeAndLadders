@@ -34,4 +34,16 @@
     
 }
 
+-(void)roll {
+    
+    Player *player = [[Player alloc] init];
+    
+    [player rollDice];
+    
+}
+
+-(void)output {
+    
+}
+
 @end

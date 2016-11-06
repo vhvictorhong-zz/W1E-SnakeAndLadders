@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Player.h"
 
 @interface PlayerManager : NSObject
 
 @property NSMutableArray *players;
 
 -(void)createPlayers:(NSString *)numberOfPlayers;
+-(void)roll;
+-(void)output;
 
 @end

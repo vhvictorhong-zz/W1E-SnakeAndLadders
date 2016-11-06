@@ -39,6 +39,18 @@
     
     self.currentSquare += rollDice;
     
+    NSNumber *myNum = @(self.currentSquare);
+    
+    for (id key in self.gameLogic ) {
+        
+        if ([myNum isEqualToNumber:key]) {
+            
+            self.currentSquare = [[self.gameLogic objectForKey:key] integerValue];
+            
+        }
+        
+    }
+    
     NSLog(@"%ld", (long)rollDice);
     
     NSLog(@"Current square %ld", (long)self.currentSquare);
